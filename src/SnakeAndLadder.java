@@ -4,11 +4,13 @@ public class SnakeAndLadder {
         System.out.println("Welcome to Snake and Ladder Simulator");
 
         int playerPosition =0;
+        int diceRollCount=0;
         //Rolling die
 
 
         while (playerPosition < winning_position) {
             int dieRoll = (int) (Math.random() * 6) + 1;
+            diceRollCount++;
 
             // Options: 0 -> No Play, 1 -> Ladder, 2 -> Snake
             int option = (int) (Math.random() * 3);
@@ -26,9 +28,9 @@ public class SnakeAndLadder {
                     if (playerPosition < 0) playerPosition = 0;
                     break;
             }
-            System.out.println("Player's current position: " + playerPosition);
+            System.out.println("Player rolled: " + dieRoll + ", Current position: " + playerPosition);
         }
-        System.out.println("Player reached the winning position!");
+        System.out.println("Player reached the winning position in " + diceRollCount + " rolls!");
 
     }
 }
