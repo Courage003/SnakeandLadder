@@ -3,7 +3,9 @@ public class SnakeAndLadder {
         System.out.println("Welcome to Snake and Ladder Simulator");
 
         int playerPosition =0;
-        System.out.println("Player starts at position: "+ playerPosition);
+        //Rolling die
+        int dieRoll= (int)(Math.random()*6)+1;
+        System.out.println("Player rolls die: "+ dieRoll);
 
     }
 }
